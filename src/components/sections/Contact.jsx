@@ -27,7 +27,7 @@ export default function Contact() {
     setStatus('loading')
 
     try {
-      await fetch('/api/contact', {
+      await fetch('https://portfolio-contact.williamsvillavizar204.workers.dev', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

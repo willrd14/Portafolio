@@ -2,6 +2,5 @@ name = "portfolio-contact"
 main = "workers/contact-form/index.js"
 compatibility_date = "2024-01-01"
 
-[env]
-RESEND_API_KEY = ""
-CONTACT_EMAIL = "wtech-support@w-tech.uk"
+[vars]
+CONTACT_EMAIL = "williamsvillavizar204@gmail.com"
