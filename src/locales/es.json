@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Williams R. Villavizar Hdez",
+    "titles": ["Desarrollador Web", "Web Designer", "Junior Dev"],
+    "subtitle": "Creando experiencias web modernas y funcionales",
+    "cta_primary": "Ver Proyectos",
+    "cta_secondary": "Contactar",
+    "open_to_work": "Open to Work Remote"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "bio": "Desarrollador web apasionado por crear interfaces modernas, funcionales y con excelente rendimiento. Me especializo en frontend con React y diseño UI/UX con enfoque minimalista.",
+    "download_cv": "Descargar CV",
+    "location": "República Dominicana"
+  },
+  "skills": {
+    "title": "Stack Tecnológico",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Herramientas",
+      "design": "Diseño"
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "view_project": "Ver Proyecto",
+    "view_code": "Ver Código",
+    "all": "Todos",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "fullstack": "Full Stack"
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "present": "Presente"
+  },
+  "services": {
+    "title": "Servicios",
+    "items": [
+      {
+        "title": "Desarrollo Web Frontend",
+        "description": "Aplicaciones web modernas con React, Vite y Tailwind CSS"
+      },
+      {
+        "title": "Diseño UI/UX",
+        "description": "Interfaces limpias y intuitivas con enfoque en la experiencia del usuario"
+      },
+      {
+        "title": "Maquetación Responsive",
+        "description": "Diseños que se adaptan perfectamente a cualquier dispositivo"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "name": "Nombre",
+    "email": "Email",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "subjects": {
+      "employment": "Empleo",
+      "freelance": "Freelance",
+      "collaboration": "Colaboración",
+      "other": "Otro"
+    },
+    "success": "Mensaje enviado correctamente",
+    "error": "Error al enviar el mensaje"
+  },
+  "footer": {
+    "copyright": "© 2026 Williams R. Villavizar Hdez. Todos los derechos reservados.",
+    "built_with": "Construido con React + Tailwind CSS"
+  }
+}

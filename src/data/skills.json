@@ -1,0 +1,25 @@
+{
+  "frontend": [
+    { "name": "React", "icon": "react" },
+    { "name": "Vite", "icon": "vite" },
+    { "name": "Tailwind CSS", "icon": "tailwind" },
+    { "name": "HTML5", "icon": "html" },
+    { "name": "CSS3", "icon": "css" },
+    { "name": "JavaScript", "icon": "javascript" }
+  ],
+  "backend": [
+    { "name": "Node.js", "icon": "nodejs" },
+    { "name": "Express", "icon": "express" },
+    { "name": "Supabase", "icon": "supabase" }
+  ],
+  "tools": [
+    { "name": "Git", "icon": "git" },
+    { "name": "Docker", "icon": "docker" },
+    { "name": "Cloudflare", "icon": "cloudflare" },
+    { "name": "Figma", "icon": "figma" }
+  ],
+  "design": [
+    { "name": "UI/UX", "icon": "design" },
+    { "name": "Responsive Design", "icon": "responsive" }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Williams R. Villavizar Hdez",
+    "titles": ["Web Developer", "Web Designer", "Junior Dev"],
+    "subtitle": "Creating modern and functional web experiences",
+    "open_to_work": "Open to Work Remote",
+    "cta_primary": "View Projects",
+    "cta_secondary": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "Passionate web developer focused on creating modern, functional interfaces with excellent performance. I specialize in frontend with React and UI/UX design with a minimalist approach.",
+    "download_cv": "Download CV",
+    "location": "Dominican Republic"
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "design": "Design"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "view_project": "View Project",
+    "view_code": "View Code",
+    "all": "All",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "fullstack": "Full Stack"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "present": "Present"
+  },
+  "services": {
+    "title": "Services",
+    "items": [
+      {
+        "title": "Frontend Web Development",
+        "description": "Modern web applications with React, Vite and Tailwind CSS"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Clean and intuitive interfaces focused on user experience"
+      },
+      {
+        "title": "Responsive Design",
+        "description": "Designs that adapt perfectly to any device"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "subjects": {
+      "employment": "Employment",
+      "freelance": "Freelance",
+      "collaboration": "Collaboration",
+      "other": "Other"
+    },
+    "success": "Message sent successfully",
+    "error": "Error sending message"
+  },
+  "footer": {
+    "copyright": "© 2026 Williams R. Villavizar Hdez. All rights reserved.",
+    "built_with": "Built with React + Tailwind CSS"
+  }
+}

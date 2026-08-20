@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tech-cinematografico",
+    "title": "Técnico en Proyecciones Cinematográficas",
+    "company": "Caribbean Cinemas",
+    "startDate": "Enero 2023",
+    "endDate": "Julio 2025",
+    "periods": [
+      { "start": "Enero 2023", "end": "Octubre 2023" },
+      { "start": "Noviembre 2024", "end": "Julio 2025" }
+    ],
+    "description": [
+      "Supervisión de proyecciones en seis salas de cine, garantizando un rendimiento y una calidad óptimos.",
+      "Automatización de los procesos de reproducción de películas, lo que mejoró la eficiencia en un 30%.",
+      "Mantenimiento de equipos técnicos, lo que redujo el tiempo de inactividad en un 20%."
+    ],
+    "tech": ["Automatización", "Mantenimiento Técnico", "Proyección Digital"],
+    "order": 1
+  },
+  {
+    "id": "personal-linea",
+    "title": "Personal de Línea",
+    "company": "Caribbean Cinemas",
+    "startDate": "Enero 2022",
+    "endDate": "Noviembre 2024",
+    "periods": [
+      { "start": "Enero 2022", "end": "Enero 2023" },
+      { "start": "Abril 2024", "end": "Noviembre 2024" }
+    ],
+    "description": [
+      "Atención al cliente, resolviendo conflictos de manera efectiva.",
+      "Reposición de materiales de venta, asegurando disponibilidad para clientes.",
+      "Colaboración en equipo para mejorar la experiencia del cliente."
+    ],
+    "tech": ["Atención al Cliente", "Trabajo en Equipo"],
+    "order": 2
+  }
+]

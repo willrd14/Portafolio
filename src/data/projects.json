@@ -1,0 +1,28 @@
+[
+  {
+    "id": "wtech-store",
+    "title": "WTech Store",
+    "slug": "wtech-store",
+    "description": "E-commerce de accesorios de celulares con panel de administración, pagos PayPal y diseño cyberpunk.",
+    "category": "fullstack",
+    "tech": ["React", "Vite", "Tailwind CSS", "Express", "Supabase", "PayPal"],
+    "image": "/images/projects/wtech-store.png",
+    "liveUrl": "https://w-tech.uk/",
+    "repoUrl": null,
+    "featured": true,
+    "order": 1
+  },
+  {
+    "id": "portfolio",
+    "title": "Portfolio Personal",
+    "slug": "portfolio",
+    "description": "Sitio web portafolio personal con diseño Apple-style, modo oscuro/claro, bilingüe ES/EN y CMS administrativo.",
+    "category": "frontend",
+    "tech": ["React", "Vite", "Tailwind CSS", "Motion", "Decap CMS"],
+    "image": null,
+    "liveUrl": null,
+    "repoUrl": null,
+    "featured": false,
+    "order": 2
+  }
+]
