@@ -42,7 +42,7 @@ ${message}
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'Portfolio Contact <noreply@w-tech.uk>',
+          from: 'Portfolio Contact <onboarding@resend.dev>',
           to: [env.CONTACT_EMAIL || 'wtech-support@w-tech.uk'],
           subject: `[Portfolio] ${subject || 'New contact'} from ${name}`,
           text: emailBody,
