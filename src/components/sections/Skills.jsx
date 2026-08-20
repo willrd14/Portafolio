@@ -58,7 +58,7 @@ export default function Skills() {
                     >
                       <div className={`flex-shrink-0 w-10 h-10 rounded-xl ${color.bg} flex items-center justify-center transition-transform duration-300 group-hover:scale-110`}>
                         {iconSrc ? (
-                          <img src={iconSrc} alt={skill.name} className="w-6 h-6 object-contain" />
+                          <img src={iconSrc} alt={skill.name} className="w-6 h-6 object-contain brightness-0 dark:brightness-0 dark:invert" />
                         ) : (
                           <span className="text-lg font-bold text-text-secondary dark:text-dark-text-secondary">
                             {skill.name.charAt(0)}
