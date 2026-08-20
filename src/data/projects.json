@@ -8,7 +8,7 @@
     "tech": ["React", "Vite", "Tailwind CSS", "Express", "Supabase", "PayPal"],
     "image": "/images/projects/wtech-store.png",
     "liveUrl": "https://w-tech.uk/",
-    "repoUrl": null,
+    "repoUrl": "https://github.com/willrd14/WTech_Store",
     "featured": true,
     "order": 1
   },
@@ -19,9 +19,9 @@
     "description": "Sitio web portafolio personal con diseño Apple-style, modo oscuro/claro, bilingüe ES/EN y CMS administrativo.",
     "category": "frontend",
     "tech": ["React", "Vite", "Tailwind CSS", "Motion", "Decap CMS"],
-    "image": null,
-    "liveUrl": null,
-    "repoUrl": null,
+    "image": "/images/projects/portfolio.png",
+    "liveUrl": "https://portfolio-1j3.pages.dev",
+    "repoUrl": "https://github.com/willrd14/Portafolio",
     "featured": false,
     "order": 2
   }
