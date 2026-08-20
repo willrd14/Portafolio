@@ -8,17 +8,17 @@ const iconMap = {
   vite: '/images/icons/tech/vite.svg',
   tailwind: '/images/icons/tech/tailwind.svg',
   javascript: '/images/icons/tech/javascript.svg',
-  html: null,
-  css: null,
+  html: '/images/icons/tech/html.svg',
+  css: '/images/icons/tech/css.svg',
   nodejs: '/images/icons/tech/nodejs.svg',
-  express: null,
+  express: '/images/icons/tech/express.svg',
   supabase: '/images/icons/tech/supabase.svg',
   git: '/images/icons/tech/git.svg',
   docker: '/images/icons/tech/docker.svg',
   cloudflare: '/images/icons/tech/cloudflare.svg',
   figma: '/images/icons/tech/figma.svg',
-  design: null,
-  responsive: null,
+  design: '/images/icons/tech/design.svg',
+  responsive: '/images/icons/tech/responsive.svg',
 }
 
 const categoryColors = {
