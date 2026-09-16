@@ -24,5 +24,31 @@
     "repoUrl": "https://github.com/willrd14/Portafolio",
     "featured": false,
     "order": 2
+  },
+  {
+    "id": "agendalo",
+    "title": "Agendalo",
+    "slug": "agendalo",
+    "description": "SaaS de reservas de citas para negocios de servicios: multi-empleado, pagos con PayPal (incluye depósitos de garantía), recordatorios por email/SMS y planes Basic/Pro.",
+    "category": "fullstack",
+    "tech": ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "PayPal"],
+    "image": "/images/projects/agendalo.png",
+    "liveUrl": "",
+    "repoUrl": "https://github.com/willrd14/Agendalo",
+    "featured": true,
+    "order": 3
+  },
+  {
+    "id": "calculadora-tarifas",
+    "title": "Calculadora de Tarifas",
+    "slug": "calculadora-tarifas",
+    "description": "App de escritorio (Tauri) para cotizar proyectos freelance: formulario dinámico con plantillas por tipo de proyecto, cálculo en vivo y generación de PDF profesional, todo local sin nube.",
+    "category": "desktop",
+    "tech": ["Tauri", "React", "TypeScript", "Tailwind CSS", "SQLite"],
+    "image": "/images/projects/calculadora-tarifas.png",
+    "liveUrl": "",
+    "repoUrl": "https://github.com/willrd14/Calculadora-Tarifas",
+    "featured": true,
+    "order": 4
   }
 ]

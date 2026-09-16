@@ -7,7 +7,7 @@ import ScrollReveal from '../effects/ScrollReveal'
 import { useLanguage } from '../../context/LanguageContext'
 import projectsData from '../../data/projects.json'
 
-const categories = ['all', 'frontend', 'backend', 'fullstack']
+const categories = ['all', 'frontend', 'backend', 'fullstack', 'desktop']
 
 export default function Projects() {
   const { t } = useLanguage()
