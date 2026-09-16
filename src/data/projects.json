@@ -32,7 +32,7 @@
     "description": "SaaS de reservas de citas para negocios de servicios: multi-empleado, pagos con PayPal (incluye depósitos de garantía), recordatorios por email/SMS y planes Basic/Pro.",
     "category": "fullstack",
     "tech": ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "PayPal"],
-    "image": "/images/projects/agendalo.png",
+    "image": "/images/projects/agendalo.jpg",
     "liveUrl": "",
     "repoUrl": "https://github.com/willrd14/Agendalo",
     "featured": true,
