@@ -1,8 +1,11 @@
 {
   "frontend": [
     { "name": "React", "icon": "react" },
+    { "name": "Next.js", "icon": "nextjs" },
+    { "name": "TypeScript", "icon": "typescript" },
     { "name": "Vite", "icon": "vite" },
     { "name": "Tailwind CSS", "icon": "tailwind" },
+    { "name": "Motion", "icon": "motion" },
     { "name": "HTML5", "icon": "html" },
     { "name": "CSS3", "icon": "css" },
     { "name": "JavaScript", "icon": "javascript" }
@@ -10,13 +13,17 @@
   "backend": [
     { "name": "Node.js", "icon": "nodejs" },
     { "name": "Express", "icon": "express" },
-    { "name": "Supabase", "icon": "supabase" }
+    { "name": "Supabase", "icon": "supabase" },
+    { "name": "SQLite", "icon": "sqlite" },
+    { "name": "Tauri", "icon": "tauri" }
   ],
   "tools": [
     { "name": "Git", "icon": "git" },
     { "name": "Docker", "icon": "docker" },
     { "name": "Cloudflare", "icon": "cloudflare" },
-    { "name": "Figma", "icon": "figma" }
+    { "name": "Figma", "icon": "figma" },
+    { "name": "PayPal", "icon": "paypal" },
+    { "name": "Decap CMS", "icon": "decap" }
   ],
   "design": [
     { "name": "UI/UX", "icon": "design" },
