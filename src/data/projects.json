@@ -50,5 +50,18 @@
     "repoUrl": "https://github.com/willrd14/Calculadora-Tarifas",
     "featured": true,
     "order": 4
+  },
+  {
+    "id": "jarvis",
+    "title": "Jarvis",
+    "slug": "jarvis",
+    "description": "Asistente de voz personal tipo holograma: núcleo de energía animado en Canvas 2D, reconocimiento y síntesis de voz, cerebro con Claude, y acciones reales de correo/calendario con confirmación de un clic.",
+    "category": "fullstack",
+    "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Claude API", "ElevenLabs", "Cloudflare Workers"],
+    "image": "/images/projects/jarvis.png",
+    "liveUrl": "https://jarvis.w-tech.uk",
+    "repoUrl": "https://github.com/willrd14/Jarvis",
+    "featured": true,
+    "order": 5
   }
 ]
