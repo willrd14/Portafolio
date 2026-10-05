@@ -25,8 +25,8 @@
     ],
     "description": [
       "Supervisión de proyecciones en seis salas de cine, garantizando un rendimiento y una calidad óptimos.",
-      "Automatización de los procesos de reproducción de películas, lo que mejoró la eficiencia en un 30%.",
-      "Mantenimiento de equipos técnicos, lo que redujo el tiempo de inactividad en un 20%."
+      "Automatización de los procesos de reproducción de películas.",
+      "Mantenimiento de los equipos técnicos de proyección."
     ],
     "tech": ["Automatización", "Mantenimiento Técnico", "Proyección Digital"],
     "order": 1
