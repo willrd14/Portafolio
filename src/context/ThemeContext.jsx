@@ -7,9 +7,9 @@ export function ThemeProvider({ children }) {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('theme')
       if (saved) return saved
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      return 'dark' // la identidad de marca es oscura; el claro es opcional
     }
-    return 'light'
+    return 'dark'
   })
 
   useEffect(() => {

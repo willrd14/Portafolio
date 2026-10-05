@@ -11,11 +11,17 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Williams R. Villavizar Hdez",
-    "titles": ["Web Developer", "Web Designer", "Junior Dev"],
-    "subtitle": "Creating modern and functional web experiences",
-    "cta_primary": "View Projects",
-    "cta_secondary": "Contact",
-    "open_to_work": "Open to Work Remote"
+    "titles": [
+      "Web Developer",
+      "Web Designer",
+      "Junior Dev"
+    ],
+    "subtitle": "Developer in training in Santo Domingo. I build with AI and teach it in public.",
+    "cta_primary": "View projects",
+    "cta_secondary": "Contact me",
+    "open_to_work": "Open to remote work",
+    "promise_1": "Learn. Build.",
+    "promise_2": "Without overpaying."
   },
   "about": {
     "title": "About Me",

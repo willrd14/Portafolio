@@ -16,7 +16,7 @@
     "id": "portfolio",
     "title": "Portfolio Personal",
     "slug": "portfolio",
-    "description": "Sitio web portafolio personal con diseño Apple-style, modo oscuro/claro, bilingüe ES/EN y CMS administrativo.",
+    "description": "Sitio web portafolio personal con identidad de marca gamer/neón (cian, magenta y cursor lima), modo oscuro/claro, bilingüe ES/EN y CMS administrativo.",
     "category": "frontend",
     "tech": ["React", "Vite", "Tailwind CSS", "Motion", "Decap CMS"],
     "image": "/images/projects/portfolio.png",

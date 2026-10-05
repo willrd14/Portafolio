@@ -36,7 +36,7 @@ export default function Typewriter({ words = [] }) {
   return (
     <span className="text-accent dark:text-dark-accent font-mono">
       {text}
-      <span className="animate-pulse">|</span>
+      <span className="cursor" aria-hidden="true" />
     </span>
   )
 }

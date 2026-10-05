@@ -7,14 +7,14 @@ export default function About() {
   const { t } = useLanguage()
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-surface dark:bg-dark-surface">
+    <section id="about" className="py-24 md:py-32 section-line">
       <Container>
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <ScrollReveal direction="left">
             <div className="flex justify-center">
               <div className="relative">
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 dark:from-dark-accent/30 dark:to-dark-accent/10 blur-sm" />
-                <div className="relative w-64 h-64 rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-dark-accent/40 to-dark-magenta/40 blur-md" aria-hidden="true" />
+                <div className="relative w-64 h-64 rounded-full bg-surface dark:bg-dark-surface border border-border dark:border-dark-border overflow-hidden">
                   <img
                     src="/images/avatar.jpg"
                     alt="Williams R. Villavizar Hdez"
@@ -27,8 +27,9 @@ export default function About() {
 
           <div>
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-dark-text-primary mb-6 tracking-tight">
-                {t('about.title')}
+              <p className="label-mono mb-3">01 · {t('nav.about')}</p>
+              <h2 className="text-3xl md:text-4xl text-text-primary dark:text-dark-text-primary mb-6">
+                {t('about.title')}<span className="cursor" aria-hidden="true" />
               </h2>
             </ScrollReveal>
 
@@ -49,7 +50,7 @@ export default function About() {
               <a
                 href="/cv.pdf"
                 download
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent dark:bg-dark-accent text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25 dark:hover:shadow-dark-accent/25"
+                className="btn btn-primary"
               >
                 <Download size={18} />
                 {t('about.download_cv')}

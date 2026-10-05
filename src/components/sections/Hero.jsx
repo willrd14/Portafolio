@@ -9,70 +9,81 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black"
+      className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20"
     >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="hero-blob absolute -top-32 -right-32 w-96 h-96 rounded-full bg-accent/10 dark:bg-dark-accent/10 blur-3xl" />
-        <div className="hero-blob absolute -bottom-48 -left-48 w-[32rem] h-[32rem] rounded-full bg-accent/5 dark:bg-dark-accent/5 blur-3xl" style={{ animationDelay: '2s' }} />
-      </div>
+      <div className="absolute inset-0 bg-grid pointer-events-none" aria-hidden="true" />
 
-      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-        <ScrollReveal>
-          <p className="text-lg md:text-xl text-text-secondary dark:text-dark-text-secondary mb-4 font-light tracking-wide">
-            {t('hero.greeting')}
-          </p>
-        </ScrollReveal>
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-[1.7fr_1fr] gap-12 items-center">
+          <div>
+            <ScrollReveal>
+              <p className="label-mono mb-6">
+                <span className="text-text-secondary dark:text-dark-text-secondary">&gt;</span> wilrd14
+              </p>
+            </ScrollReveal>
 
-        <ScrollReveal delay={0.1}>
-          <div className="flex flex-col items-center mb-6">
-            <h1 className="text-5xl md:text-7xl font-bold text-text-primary dark:text-dark-text-primary tracking-tight mb-4">
-              {t('hero.name')}
-            </h1>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 dark:bg-emerald-400/10 border border-emerald-500/20 dark:border-emerald-400/20">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 dark:bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 dark:bg-emerald-400" />
-              </span>
-              <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
-                {t('hero.open_to_work')}
-              </span>
+            <ScrollReveal delay={0.1}>
+              <h1 className="text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-text-primary dark:text-dark-text-primary mb-6">
+                {t('hero.promise_1')}
+                <br />
+                <span className="text-accent dark:text-dark-accent whitespace-nowrap">{t('hero.promise_2')}<span className="cursor" aria-hidden="true" /></span>
+              </h1>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <p className="text-lg md:text-xl text-text-secondary dark:text-dark-text-secondary mb-3 max-w-xl leading-relaxed">
+                {t('hero.subtitle')}
+              </p>
+              <div className="font-mono text-base md:text-lg mb-8 h-8 flex items-center">
+                <span className="text-text-secondary dark:text-dark-text-secondary mr-2">
+                  {t('hero.greeting')} Williams —
+                </span>
+                <Typewriter words={t('hero.titles')} />
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a href="#projects" className="btn btn-primary">
+                  {t('hero.cta_primary')}
+                </a>
+                <a href="#contact" className="btn btn-secondary">
+                  {t('hero.cta_secondary')}
+                </a>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border dark:border-dark-border">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime opacity-60 motion-reduce:hidden" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-lime" />
+                </span>
+                <span className="font-mono text-xs text-text-secondary dark:text-dark-text-secondary">
+                  {t('hero.open_to_work')}
+                </span>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.2} direction="right">
+            <div className="hidden lg:flex justify-center">
+              <img
+                src="/brand/logo-monograma-color.svg"
+                alt="Monograma W_ de Williams"
+                className="w-full max-w-xs h-auto hidden dark:block drop-shadow-[0_0_40px_rgba(0,229,255,0.15)]"
+              />
+              <img
+                src="/brand/logo-monograma-oscuro.svg"
+                alt="Monograma W_ de Williams"
+                className="w-full max-w-xs h-auto dark:hidden"
+              />
             </div>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.2}>
-          <div className="text-2xl md:text-3xl mb-8 h-10 flex items-center justify-center">
-            <Typewriter words={t('hero.titles')} />
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.3}>
-          <p className="text-lg md:text-xl text-text-secondary dark:text-dark-text-secondary mb-12 font-light max-w-xl mx-auto leading-relaxed">
-            {t('hero.subtitle')}
-          </p>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.4}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-accent dark:bg-dark-accent text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25 dark:hover:shadow-dark-accent/25"
-            >
-              {t('hero.cta_primary')}
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-gray-300 dark:border-gray-700 text-text-primary dark:text-dark-text-primary font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-white/5"
-            >
-              {t('hero.cta_secondary')}
-            </a>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
       </div>
 
       <a
         href="#about"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-secondary dark:text-dark-text-secondary hover:text-text-primary dark:hover:text-dark-text-primary transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-secondary dark:text-dark-text-secondary hover:text-accent dark:hover:text-dark-accent transition-colors motion-safe:animate-bounce"
         aria-label="Scroll down"
       >
         <ChevronDown size={28} />

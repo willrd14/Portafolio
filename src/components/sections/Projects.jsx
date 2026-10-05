@@ -18,11 +18,11 @@ export default function Projects() {
     : projectsData.filter(p => p.category === filter)
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-surface dark:bg-dark-surface">
+    <section id="projects" className="py-24 md:py-32 section-line">
       <Container>
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            {t('projects.title')}
+          <h2 className="text-3xl md:text-4xl text-center mb-8">
+            {t('projects.title')}<span className="cursor" aria-hidden="true" />
           </h2>
         </ScrollReveal>
 
@@ -32,10 +32,11 @@ export default function Projects() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                aria-pressed={filter === cat}
+                className={`chip min-h-11 px-4 text-sm cursor-pointer transition-colors ${
                   filter === cat
-                    ? 'bg-accent dark:bg-dark-accent text-white'
-                    : 'bg-bg dark:bg-dark-bg text-text-secondary dark:text-dark-text-secondary hover:text-text-primary dark:hover:text-dark-text-primary'
+                    ? 'chip-accent font-semibold'
+                    : 'hover:text-accent dark:hover:text-dark-accent'
                 }`}
               >
                 {t(`projects.${cat}`)}
@@ -47,8 +48,8 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((project, index) => (
             <ScrollReveal key={project.id} delay={index * 0.1}>
-              <div className="group bg-bg dark:bg-dark-bg rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
-                <div className="aspect-video bg-border/20 dark:bg-dark-border/20 overflow-hidden">
+              <div className="card group overflow-hidden h-full transition-all duration-300 hover:-translate-y-0.5 dark:hover:shadow-[var(--shadow-glow)]">
+                <div className="aspect-video bg-bg dark:bg-dark-bg border-b border-border dark:border-dark-border overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -63,7 +64,7 @@ export default function Projects() {
                     {project.tech.slice(0, 3).map(tech => (
                       <span
                         key={tech}
-                        className="px-2 py-1 text-xs bg-accent/10 dark:bg-dark-accent/10 text-accent dark:text-dark-accent rounded"
+                        className="chip chip-accent font-mono"
                       >
                         {tech}
                       </span>
@@ -74,7 +75,7 @@ export default function Projects() {
                       </span>
                     )}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <h3 className="text-xl mb-2">{project.title}</h3>
                   <p className="text-sm text-text-secondary dark:text-dark-text-secondary mb-4 line-clamp-2">
                     {project.description}
                   </p>

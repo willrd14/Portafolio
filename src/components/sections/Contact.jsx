@@ -40,11 +40,11 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-bg dark:bg-dark-bg">
+    <section id="contact" className="py-24 md:py-32 section-line">
       <Container>
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-dark-text-primary mb-16 tracking-tight text-center">
-            {t('contact.title')}
+          <h2 className="text-3xl md:text-4xl text-text-primary dark:text-dark-text-primary mb-16 text-center">
+            {t('contact.title')}<span className="cursor" aria-hidden="true" />
           </h2>
         </ScrollReveal>
 
@@ -55,7 +55,7 @@ export default function Contact() {
                 const displayValue = valueKey ? t(valueKey) : value
                 const content = (
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-2xl bg-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
                       <Icon size={22} className="text-accent dark:text-dark-accent" />
                     </div>
                     <div>
@@ -79,7 +79,7 @@ export default function Contact() {
           <ScrollReveal direction="right">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">
+                <label className="block label-mono !text-text-secondary dark:!text-dark-text-secondary mb-2">
                   {t('contact.name')}
                 </label>
                 <input
@@ -88,12 +88,12 @@ export default function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-surface dark:bg-dark-surface border border-border dark:border-dark-border text-text-primary dark:text-dark-text-primary placeholder-text-secondary/50 dark:placeholder-dark-text-secondary/50 focus:outline-none focus:ring-2 focus:ring-accent/50 dark:focus:ring-dark-accent/50 transition-all"
+                  className="field"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">
+                <label className="block label-mono !text-text-secondary dark:!text-dark-text-secondary mb-2">
                   {t('contact.email')}
                 </label>
                 <input
@@ -102,12 +102,12 @@ export default function Contact() {
                   value={form.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-surface dark:bg-dark-surface border border-border dark:border-dark-border text-text-primary dark:text-dark-text-primary placeholder-text-secondary/50 dark:placeholder-dark-text-secondary/50 focus:outline-none focus:ring-2 focus:ring-accent/50 dark:focus:ring-dark-accent/50 transition-all"
+                  className="field"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">
+                <label className="block label-mono !text-text-secondary dark:!text-dark-text-secondary mb-2">
                   {t('contact.subject')}
                 </label>
                 <select
@@ -115,7 +115,7 @@ export default function Contact() {
                   value={form.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-surface dark:bg-dark-surface border border-border dark:border-dark-border text-text-primary dark:text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 dark:focus:ring-dark-accent/50 transition-all"
+                  className="field"
                 >
                   <option value="" disabled>{t('contact.subject')}</option>
                   <option value="employment">{t('contact.subjects.employment')}</option>
@@ -126,7 +126,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">
+                <label className="block label-mono !text-text-secondary dark:!text-dark-text-secondary mb-2">
                   {t('contact.message')}
                 </label>
                 <textarea
@@ -135,26 +135,26 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl bg-surface dark:bg-dark-surface border border-border dark:border-dark-border text-text-primary dark:text-dark-text-primary placeholder-text-secondary/50 dark:placeholder-dark-text-secondary/50 focus:outline-none focus:ring-2 focus:ring-accent/50 dark:focus:ring-dark-accent/50 transition-all resize-none"
+                  className="field resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent dark:bg-dark-accent text-white font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/25 dark:hover:shadow-dark-accent/25 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="btn btn-primary w-full"
               >
                 <Send size={18} />
                 {status === 'loading' ? '...' : t('contact.send')}
               </button>
 
               {status === 'success' && (
-                <p className="text-center text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                <p className="text-center text-sm font-medium text-accent dark:text-dark-accent">
                   {t('contact.success')}
                 </p>
               )}
               {status === 'error' && (
-                <p className="text-center text-sm font-medium text-red-600 dark:text-red-400">
+                <p className="text-center text-sm font-medium text-magenta dark:text-dark-magenta">
                   {t('contact.error')}
                 </p>
               )}

@@ -14,15 +14,15 @@ function App() {
         <LanguageProvider>
           <BrowserRouter>
             <Helmet>
-              <title>Williams R. Villavizar Hdez — Developer & Designer</title>
-              <meta name="description" content="Portfolio de Williams R. Villavizar Hdez, desarrollador web y diseñador de interfaces. React, Vite, Tailwind CSS." />
-              <meta property="og:title" content="Williams R. Villavizar Hdez — Developer & Designer" />
-              <meta property="og:description" content="Portfolio de Williams R. Villavizar Hdez, desarrollador web y diseñador de interfaces." />
+              <title>Williams | Dev RD · IA, código y gaming</title>
+              <meta name="description" content="Aprende. Construye. Sin pagar de más. Williams, dev dominicano: construyo con IA y comparto lo que aprendo." />
+              <meta property="og:title" content="Williams | Dev RD · IA, código y gaming" />
+              <meta property="og:description" content="Aprende. Construye. Sin pagar de más." />
               <meta property="og:image" content="https://wilrd14.dev/og-image.png" />
               <meta property="og:url" content="https://wilrd14.dev" />
               <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
-            <div className="min-h-screen flex flex-col bg-bg dark:bg-dark-bg text-text-primary dark:text-dark-text-primary">
+            <div className="min-h-screen flex flex-col text-text-primary dark:text-dark-text-primary">
               <Header />
               <main className="flex-1">
                 <Routes>

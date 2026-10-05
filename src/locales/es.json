@@ -11,11 +11,17 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Williams R. Villavizar Hdez",
-    "titles": ["Desarrollador Web", "Web Designer", "Junior Dev"],
-    "subtitle": "Creando experiencias web modernas y funcionales",
-    "cta_primary": "Ver Proyectos",
-    "cta_secondary": "Contactar",
-    "open_to_work": "Open to Work Remote"
+    "titles": [
+      "Desarrollador Web",
+      "Web Designer",
+      "Junior Dev"
+    ],
+    "subtitle": "Dev en formación en Santo Domingo. Construyo con IA y lo enseño en público.",
+    "cta_primary": "Ver proyectos",
+    "cta_secondary": "Escríbeme",
+    "open_to_work": "Disponible para trabajo remoto",
+    "promise_1": "Aprende. Construye.",
+    "promise_2": "Sin pagar de más."
   },
   "about": {
     "title": "Sobre Mí",

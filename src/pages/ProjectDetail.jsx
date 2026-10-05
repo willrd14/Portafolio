@@ -16,7 +16,7 @@ export default function ProjectDetail() {
     return (
       <Container className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">404</h1>
+          <h1 className="text-4xl mb-4">404<span className="cursor" aria-hidden="true" /></h1>
           <p className="text-text-secondary dark:text-dark-text-secondary mb-8">
             Proyecto no encontrado
           </p>
@@ -33,7 +33,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <Container className="py-24 md:py-32">
+    <Container className="pt-28 pb-24 md:pb-32">
       <ScrollReveal>
         <Link
           to="/"
@@ -50,14 +50,14 @@ export default function ProjectDetail() {
             {project.tech.map(tech => (
               <span
                 key={tech}
-                className="px-3 py-1 text-sm bg-accent/10 dark:bg-dark-accent/10 text-accent dark:text-dark-accent rounded-full"
+                className="chip chip-accent font-mono"
               >
                 {tech}
               </span>
             ))}
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {project.title}
+          <h1 className="text-4xl md:text-5xl mb-4">
+            {project.title}<span className="cursor" aria-hidden="true" />
           </h1>
           <p className="text-lg text-text-secondary dark:text-dark-text-secondary">
             {project.description}
@@ -66,7 +66,7 @@ export default function ProjectDetail() {
       </ScrollReveal>
 
       <ScrollReveal delay={0.2}>
-        <div className="aspect-video bg-surface dark:bg-dark-surface rounded-xl mb-8 overflow-hidden">
+        <div className="card aspect-video mb-8 overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
@@ -85,7 +85,7 @@ export default function ProjectDetail() {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent dark:bg-dark-accent text-white rounded-lg hover:opacity-90 transition-opacity"
+              className="btn btn-primary"
             >
               <ExternalLink size={16} />
               {t('projects.view_project')}
@@ -96,7 +96,7 @@ export default function ProjectDetail() {
               href={project.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-border dark:border-dark-border rounded-lg hover:bg-surface dark:hover:bg-dark-surface transition-colors"
+              className="btn btn-secondary"
             >
               <GithubIcon size={16} />
               {t('projects.view_code')}

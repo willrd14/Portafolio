@@ -49,7 +49,7 @@ export default function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled
-          ? 'bg-white/80 dark:bg-black/80 backdrop-blur-xl shadow-[var(--shadow-sm)]'
+          ? 'bg-bg/85 dark:bg-dark-bg/85 backdrop-blur-xl border-b border-border dark:border-dark-border'
           : 'bg-transparent'
       )}
     >
@@ -58,9 +58,11 @@ export default function Header() {
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="text-lg font-semibold text-text-primary dark:text-dark-text-primary tracking-tight"
+            className="flex items-center"
+            aria-label="Williams — inicio"
           >
-            Williams R. Villavizar
+            <img src="/brand/logo-monograma-oscuro.svg" alt="" className="h-8 w-auto dark:hidden" />
+            <img src="/brand/logo-monograma-color.svg" alt="" className="h-8 w-auto hidden dark:block" />
           </a>
 
           <nav className="hidden md:flex items-center gap-1">
@@ -70,10 +72,10 @@ export default function Header() {
                 href={href}
                 onClick={(e) => handleNavClick(e, href)}
                 className={cn(
-                  'px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200',
+                  'px-3 py-2 rounded-lg font-mono text-xs uppercase tracking-widest transition-colors duration-200',
                   'text-text-secondary dark:text-dark-text-secondary',
-                  'hover:text-text-primary dark:hover:text-dark-text-primary',
-                  'hover:bg-black/5 dark:hover:bg-white/10'
+                  'hover:text-accent dark:hover:text-dark-accent',
+                  'hover:bg-accent/10 dark:hover:bg-dark-accent/10'
                 )}
               >
                 {t(label)}
@@ -85,10 +87,10 @@ export default function Header() {
             <button
               onClick={toggleLanguage}
               className={cn(
-                'p-2 rounded-lg transition-colors duration-200',
+                'min-h-11 min-w-11 inline-flex items-center justify-center rounded-lg transition-colors duration-200',
                 'text-text-secondary dark:text-dark-text-secondary',
-                'hover:text-text-primary dark:hover:text-dark-text-primary',
-                'hover:bg-black/5 dark:hover:bg-white/10'
+                'hover:text-accent dark:hover:text-dark-accent',
+                'hover:bg-accent/10 dark:hover:bg-dark-accent/10'
               )}
               aria-label="Toggle language"
             >
@@ -99,10 +101,10 @@ export default function Header() {
             <button
               onClick={toggleTheme}
               className={cn(
-                'p-2 rounded-lg transition-colors duration-200',
+                'min-h-11 min-w-11 inline-flex items-center justify-center rounded-lg transition-colors duration-200',
                 'text-text-secondary dark:text-dark-text-secondary',
-                'hover:text-text-primary dark:hover:text-dark-text-primary',
-                'hover:bg-black/5 dark:hover:bg-white/10'
+                'hover:text-accent dark:hover:text-dark-accent',
+                'hover:bg-accent/10 dark:hover:bg-dark-accent/10'
               )}
               aria-label="Toggle theme"
             >
@@ -112,10 +114,10 @@ export default function Header() {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className={cn(
-                'md:hidden p-2 rounded-lg transition-colors duration-200',
+                'md:hidden min-h-11 min-w-11 inline-flex items-center justify-center rounded-lg transition-colors duration-200',
                 'text-text-secondary dark:text-dark-text-secondary',
-                'hover:text-text-primary dark:hover:text-dark-text-primary',
-                'hover:bg-black/5 dark:hover:bg-white/10'
+                'hover:text-accent dark:hover:text-dark-accent',
+                'hover:bg-accent/10 dark:hover:bg-dark-accent/10'
               )}
               aria-label="Toggle menu"
             >
@@ -134,12 +136,12 @@ export default function Header() {
         )}
       >
         <div
-          className="absolute inset-0 bg-black/20 dark:bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-dark-bg/60 backdrop-blur-sm"
           onClick={() => setMobileOpen(false)}
         />
         <nav
           className={cn(
-            'relative bg-white/95 dark:bg-black/95 backdrop-blur-xl',
+            'relative bg-bg/95 dark:bg-dark-bg/95 backdrop-blur-xl',
             'border-b border-border dark:border-dark-border',
             'px-4 py-4 space-y-1',
             'transition-transform duration-300 ease-out',
@@ -152,10 +154,10 @@ export default function Header() {
               href={href}
               onClick={(e) => handleNavClick(e, href)}
               className={cn(
-                'block px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200',
+                'block px-4 py-3 rounded-lg font-mono text-sm uppercase tracking-widest transition-colors duration-200',
                 'text-text-secondary dark:text-dark-text-secondary',
-                'hover:text-text-primary dark:hover:text-dark-text-primary',
-                'hover:bg-black/5 dark:hover:bg-white/10'
+                'hover:text-accent dark:hover:text-dark-accent',
+                'hover:bg-accent/10 dark:hover:bg-dark-accent/10'
               )}
             >
               {t(label)}

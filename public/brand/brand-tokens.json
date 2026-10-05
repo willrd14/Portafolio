@@ -1,0 +1,95 @@
+{
+  "name": "Williams — brand tokens v1.3",
+  "colors": {
+    "void": "#0A0C14",
+    "panel": "#121627",
+    "panel2": "#1A2036",
+    "line": "#2A3350",
+    "text": "#F2F5FF",
+    "muted": "#98A2C3",
+    "cyan": "#00E5FF",
+    "magenta": "#FF2E93",
+    "lime": "#B6FF3B"
+  },
+  "fonts": {
+    "display": "Space Grotesk (700)",
+    "body": "Inter (400, 600)",
+    "mono": "JetBrains Mono (400, 700)",
+    "license": "SIL Open Font License (Google Fonts)"
+  },
+  "rules": {
+    "one_dominant_accent_per_piece": true,
+    "lime_only_for_cursor_and_small_markers": true,
+    "never_white_text_on_magenta_small": true
+  },
+  "contrast_vs_void": {
+    "text": 17.9,
+    "muted": 7.7,
+    "cyan": 12.7,
+    "magenta": 5.6,
+    "lime": 16.1
+  },
+  "identity": {
+    "handle": "wilrd14",
+    "domain": "wilrd14.dev",
+    "domain_backup": "wilrd14.com",
+    "github_handle": "willrd14",
+    "registrar": "Cloudflare"
+  },
+  "spacing_px": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "radius_px": {
+    "chip": 4,
+    "button_input": 8,
+    "card": 12,
+    "pill": 999
+  },
+  "glow": "0 0 16px rgba(0,229,255,.35), solo en estados activos",
+  "light_variant": {
+    "bg": "#FFFFFF",
+    "text": "#0A0C14",
+    "muted": "#5A6484",
+    "cyan_ink": "#00707F",
+    "magenta_ink": "#B0004F",
+    "use": "CV, firma de correo y papel; lima no se usa"
+  },
+  "type_scale_web_px": {
+    "display": "48-64",
+    "h1": 36,
+    "h2": 24,
+    "body": "16-18",
+    "label": "12-13",
+    "code": "14-15"
+  },
+  "type_scale_video_1080_px": {
+    "display": "110-140",
+    "h1": 84,
+    "h2": 64,
+    "body": 48,
+    "label": 32,
+    "min_readable": 56,
+    "subtitles": "64-72"
+  },
+  "video_safe_zone_1080x1920": {
+    "x": [
+      60,
+      940
+    ],
+    "y": [
+      150,
+      1540
+    ],
+    "subtitles_y": [
+      1100,
+      1330
+    ]
+  }
+}

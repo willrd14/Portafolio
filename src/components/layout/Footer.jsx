@@ -22,18 +22,22 @@ export default function Footer() {
     <footer
       className={cn(
         'border-t border-border dark:border-dark-border',
-        'bg-surface dark:bg-dark-surface'
+        'bg-surface/60 dark:bg-dark-surface/60'
       )}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <img src="/brand/logo-principal-oscuro.svg" alt="Williams" className="h-6 w-auto dark:hidden" />
+            <img src="/brand/logo-principal-blanco.svg" alt="Williams" className="h-6 w-auto hidden dark:block" />
+            <div>
             <p className="text-sm text-text-secondary dark:text-dark-text-secondary">
               &copy; {new Date().getFullYear()} Williams R. Villavizar.
             </p>
             <p className="text-xs text-text-secondary/60 dark:text-dark-text-secondary/60 mt-1">
               {t('footer.builtWith') || 'Built with React + Tailwind CSS'}
             </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-3">
@@ -44,10 +48,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'p-2 rounded-lg transition-colors duration-200',
+                  'min-h-11 min-w-11 inline-flex items-center justify-center rounded-lg transition-colors duration-200',
                   'text-text-secondary dark:text-dark-text-secondary',
-                  'hover:text-text-primary dark:hover:text-dark-text-primary',
-                  'hover:bg-black/5 dark:hover:bg-white/10'
+                  'hover:text-accent dark:hover:text-dark-accent',
+                  'hover:bg-accent/10 dark:hover:bg-dark-accent/10'
                 )}
                 aria-label={name}
               >

@@ -1,103 +1,280 @@
 @import "tailwindcss";
+@import "@fontsource/space-grotesk/latin-700.css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/jetbrains-mono/latin-400.css";
+@import "@fontsource/jetbrains-mono/latin-700.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*
+  Tokens de marca @wilrd14 (brand-tokens.json v1.3).
+  Los nombres --color-* se conservan para que las utilidades existentes
+  (bg-surface, text-text-primary, dark:bg-dark-bg...) tomen la paleta nueva.
+  Claro = variante clara de la marca (papel/CV); lima no se usa en claro.
+*/
 @theme {
-  /* Colors - Light Mode (defaults) */
-  --color-bg: #FAFAFA;
+  /* Light variant */
+  --color-bg: #F2F5FF;
   --color-surface: #FFFFFF;
-  --color-text-primary: #1D1D1F;
-  --color-text-secondary: #86868B;
-  --color-accent: #0071E3;
-  --color-accent-hover: #0077ED;
-  --color-border: #E5E5EA;
+  --color-text-primary: #0A0C14;
+  --color-text-secondary: #5A6484;
+  --color-accent: #00707F;
+  --color-accent-hover: #005A66;
+  --color-border: #D3D9EE;
+  --color-magenta: #B0004F;
 
-  /* Dark Mode Colors */
-  --color-dark-bg: #000000;
-  --color-dark-surface: #1C1C1E;
-  --color-dark-text-primary: #F5F5F7;
-  --color-dark-text-secondary: #86868B;
-  --color-dark-accent: #2997FF;
-  --color-dark-accent-hover: #409CFF;
-  --color-dark-border: #38383A;
+  /* Dark (identidad principal) */
+  --color-dark-bg: #0A0C14;
+  --color-dark-surface: #121627;
+  --color-dark-surface-2: #1A2036;
+  --color-dark-text-primary: #F2F5FF;
+  --color-dark-text-secondary: #98A2C3;
+  --color-dark-accent: #00E5FF;
+  --color-dark-accent-hover: #5CF0FF;
+  --color-dark-border: #2A3350;
+  --color-dark-magenta: #FF2E93;
+  --color-lime: #B6FF3B;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  /* Radios */
+  --radius-chip: 4px;
+  --radius-control: 8px;
+  --radius-card: 12px;
 
-  /* Font families */
-  --font-display: "Fira Code", monospace;
-  --font-body: "Fira Code", monospace;
-  --font-mono: "Hack Nerd Font", "Fira Code", monospace;
+  /* Glow: solo en estados activos */
+  --shadow-glow: 0 0 16px rgba(0, 229, 255, 0.35);
+  --shadow-sm: 0 1px 2px rgba(10, 12, 20, 0.06);
+  --shadow-md: 0 4px 12px rgba(10, 12, 20, 0.08);
+  --shadow-lg: 0 8px 24px rgba(10, 12, 20, 0.12);
+
+  /* Tipografía */
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
-/* Base styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
   background-color: var(--color-bg);
   color: var(--color-text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Dark mode */
-.dark body,
-body.dark {
+/* Fondo Void con dos degradados radiales suaves (cian arriba-derecha, magenta abajo-izquierda) */
+.dark body {
   background-color: var(--color-dark-bg);
+  background-image:
+    radial-gradient(60rem 40rem at 100% 0%, rgba(0, 229, 255, 0.09), transparent 60%),
+    radial-gradient(50rem 36rem at 0% 100%, rgba(255, 46, 147, 0.07), transparent 60%);
+  background-attachment: fixed;
   color: var(--color-dark-text-primary);
 }
 
-/* Apple-style transitions */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Transiciones solo en cambio de tema */
 * {
   transition-property: background-color, border-color, color, box-shadow;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   transition-duration: 0ms;
 }
 
-/* Focus visible */
+/* Foco: anillo lima de 2 px con separación de 2 px, siempre visible */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-lime);
   outline-offset: 2px;
 }
+:root:not(.dark) :focus-visible {
+  outline-color: var(--color-accent);
+}
 
-/* Scrollbar styling */
+::selection {
+  background: rgba(0, 229, 255, 0.3);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: 4px;
 }
-
 .dark ::-webkit-scrollbar-thumb {
   background: var(--color-dark-border);
 }
 
-/* Hero blob animation */
-@keyframes blob-drift {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  25% {
-    transform: translate(30px, -20px) scale(1.05);
-  }
-  50% {
-    transform: translate(-20px, 20px) scale(0.95);
-  }
-  75% {
-    transform: translate(20px, 10px) scale(1.02);
-  }
+/* ---------- Firma: cursor lima _ ---------- */
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
-.hero-blob {
-  animation: blob-drift 12s ease-in-out infinite;
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.12em;
+  margin-left: 0.12em;
+  background: var(--color-lime);
+  vertical-align: baseline;
+  animation: cursor-blink 1.06s steps(1) infinite;
+}
+:root:not(.dark) .cursor {
+  background: var(--color-magenta);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Componentes base ---------- */
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.dark .label-mono {
+  color: var(--color-dark-accent);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  border-radius: var(--radius-card);
+}
+.dark .card {
+  background: var(--color-dark-surface);
+  border-color: var(--color-dark-border);
+  border-top-color: var(--color-dark-accent);
+}
+.card-magenta {
+  border-top-color: var(--color-magenta);
+}
+.dark .card-magenta {
+  border-top-color: var(--color-dark-magenta);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0 1.5rem;
+  border-radius: var(--radius-control);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+.dark .btn-primary {
+  background: var(--color-dark-accent);
+  color: var(--color-dark-bg);
+}
+.dark .btn-primary:hover:not(:disabled) {
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.dark .btn-secondary {
+  color: var(--color-dark-accent);
+  border-color: var(--color-dark-accent);
+}
+.dark .btn-secondary:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+.dark .chip {
+  border-color: var(--color-dark-border);
+  color: var(--color-dark-text-secondary);
+}
+.chip-accent {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(0, 112, 127, 0.08);
+}
+.dark .chip-accent {
+  border-color: var(--color-dark-accent);
+  color: var(--color-dark-accent);
+  background: rgba(0, 229, 255, 0.08);
+}
+
+.field {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.625rem 1rem;
+  border-radius: var(--radius-control);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+.dark .field {
+  background: var(--color-dark-bg);
+  border-color: var(--color-dark-border);
+  color: var(--color-dark-text-primary);
+}
+.field::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+/* Cuadrícula tenue de fondo para el hero (12 mm al 35 % ≈ 45 px) */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(42, 51, 80, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 51, 80, 0.35) 1px, transparent 1px);
+  background-size: 45px 45px;
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+}
+:root:not(.dark) .bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(90, 100, 132, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 100, 132, 0.12) 1px, transparent 1px);
+}
+
+/* Separador entre secciones */
+.section-line {
+  border-top: 1px solid var(--color-border);
+}
+.dark .section-line {
+  border-top-color: var(--color-dark-border);
 }
