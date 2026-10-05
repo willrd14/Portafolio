@@ -1,5 +1,19 @@
 [
   {
+    "id": "jce-validacion-electronica",
+    "title": "Auxiliar de Validación Electrónica",
+    "company": "Junta Central Electoral (JCE)",
+    "startDate": "Enero 2026",
+    "endDate": null,
+    "description": [
+      "Verificación de unas 100 solicitudes de cédula al día (renovaciones y primeras emisiones), comparando los datos con el sistema de registros.",
+      "Trabajo en máquinas virtuales conectadas a la red interna de la institución, usando su software propio.",
+      "Transición de modalidad presencial a trabajo remoto."
+    ],
+    "tech": ["Verificación de Datos", "Máquinas Virtuales", "Trabajo Remoto"],
+    "order": 0
+  },
+  {
     "id": "tech-cinematografico",
     "title": "Técnico en Proyecciones Cinematográficas",
     "company": "Caribbean Cinemas",
