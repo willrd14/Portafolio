@@ -4,7 +4,9 @@ import ScrollReveal from '../effects/ScrollReveal'
 import Container from '../layout/Container'
 
 export default function About() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const cvHref = language === 'en' ? '/cv-en.pdf' : '/cv.pdf'
+  const cvFileName = language === 'en' ? 'Williams-Villavizar-CV-EN.pdf' : 'Williams-Villavizar-CV.pdf'
 
   return (
     <section id="about" className="py-24 md:py-32 section-line">
@@ -48,8 +50,8 @@ export default function About() {
 
             <ScrollReveal delay={0.3}>
               <a
-                href="/cv.pdf"
-                download
+                href={cvHref}
+                download={cvFileName}
                 className="btn btn-primary"
               >
                 <Download size={18} />
