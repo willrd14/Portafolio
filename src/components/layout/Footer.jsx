@@ -5,7 +5,7 @@ import { cn } from '../../utils/cn'
 const socialLinks = [
   {
     name: 'GitHub',
-    href: 'https://github.com/willrd14',
+    href: 'https://github.com/wilrd14',
     icon: GithubIcon,
   },
   {

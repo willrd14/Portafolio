@@ -8,7 +8,7 @@
     "tech": ["React", "Vite", "Tailwind CSS", "Express", "Supabase", "PayPal"],
     "image": "/images/projects/wtech-store.png",
     "liveUrl": "https://w-tech.uk/",
-    "repoUrl": "https://github.com/willrd14/WTech_Store",
+    "repoUrl": "https://github.com/wilrd14/WTech_Store",
     "featured": true,
     "order": 1
   },
@@ -21,7 +21,7 @@
     "tech": ["React", "Vite", "Tailwind CSS", "Motion", "Decap CMS"],
     "image": "/images/projects/portfolio.png",
     "liveUrl": "https://wilrd14.dev",
-    "repoUrl": "https://github.com/willrd14/Portafolio",
+    "repoUrl": "https://github.com/wilrd14/Portafolio",
     "featured": false,
     "order": 2
   },
@@ -34,7 +34,7 @@
     "tech": ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "PayPal"],
     "image": "/images/projects/agendalo.jpg",
     "liveUrl": "",
-    "repoUrl": "https://github.com/willrd14/Agendalo",
+    "repoUrl": "https://github.com/wilrd14/Agendalo",
     "featured": true,
     "order": 3
   },
@@ -47,7 +47,7 @@
     "tech": ["Tauri", "React", "TypeScript", "Tailwind CSS", "SQLite"],
     "image": "/images/projects/calculadora-tarifas.png",
     "liveUrl": "",
-    "repoUrl": "https://github.com/willrd14/Calculadora-Tarifas",
+    "repoUrl": "https://github.com/wilrd14/Calculadora-Tarifas",
     "featured": true,
     "order": 4
   },
@@ -60,7 +60,7 @@
     "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Claude API", "ElevenLabs", "Cloudflare Workers"],
     "image": "/images/projects/jarvis.png",
     "liveUrl": "https://jarvis.w-tech.uk",
-    "repoUrl": "https://github.com/willrd14/Jarvis",
+    "repoUrl": "https://github.com/wilrd14/Jarvis",
     "featured": true,
     "order": 5
   }

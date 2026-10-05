@@ -8,7 +8,7 @@ import Container from '../layout/Container'
 const contactLinks = [
   { icon: Mail, label: 'Email', value: 'williamsvillavizar204@gmail.com', href: 'mailto:williamsvillavizar204@gmail.com' },
   { icon: MapPin, label: 'Ubicación', valueKey: 'about.location', href: null },
-  { icon: GithubIcon, label: 'GitHub', value: 'github.com/willrd14', href: 'https://github.com/willrd14' },
+  { icon: GithubIcon, label: 'GitHub', value: 'github.com/wilrd14', href: 'https://github.com/wilrd14' },
   { icon: LinkedinIcon, label: 'LinkedIn', value: 'linkedin.com/in/williams-rafael', href: 'https://www.linkedin.com/in/williams-rafael/' },
 ]
 
