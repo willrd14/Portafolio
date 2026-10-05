@@ -15,7 +15,7 @@
 
 Personal developer portfolio built with React and designed with Apple-style aesthetics. Features a clean, minimal interface with smooth animations, dark/light mode, and bilingual support (ES/EN).
 
-**Live:** [w-tech.uk](https://w-tech.uk/)
+**Live:** [wilrd14.dev](https://wilrd14.dev/)
 
 ## Tech Stack
 

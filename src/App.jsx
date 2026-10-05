@@ -18,8 +18,8 @@ function App() {
               <meta name="description" content="Portfolio de Williams R. Villavizar Hdez, desarrollador web y diseñador de interfaces. React, Vite, Tailwind CSS." />
               <meta property="og:title" content="Williams R. Villavizar Hdez — Developer & Designer" />
               <meta property="og:description" content="Portfolio de Williams R. Villavizar Hdez, desarrollador web y diseñador de interfaces." />
-              <meta property="og:image" content="https://w-tech.uk/og-image.png" />
-              <meta property="og:url" content="https://w-tech.uk" />
+              <meta property="og:image" content="https://wilrd14.dev/og-image.png" />
+              <meta property="og:url" content="https://wilrd14.dev" />
               <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <div className="min-h-screen flex flex-col bg-bg dark:bg-dark-bg text-text-primary dark:text-dark-text-primary">
